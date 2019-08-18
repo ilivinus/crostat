@@ -10,8 +10,8 @@ import styles from './styles';
 class CryptoDetailsComponent extends PureComponent {
   render() {
     const { coin } = this.props;
-    const { theme } = this.props.screenProps;
-    console.log(this.props,"###@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    const { theme } = (this.props || {}).screenProps;
+    
     const _marketCap = thousandSpace(coin.marketCapUsd);
     const _percentChang1h = thousandSpace(coin.percentChange1h);
     const _percentChang24h = thousandSpace(coin.percentChange24h);
