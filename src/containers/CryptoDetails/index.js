@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import CryptoDetailComponent from '../../components/CryptoDetails';
 import { getIfPercentNegative } from '../../utils/helpers/getIfPercentNegative';
 import { connect } from 'react-redux';
+import { getListingDetails, conversionCurrency } from '../../redux/selectors';
 
 class CryptoDetailsContainer extends PureComponent {
     
@@ -50,7 +51,7 @@ class CryptoDetailsContainer extends PureComponent {
         //TODO add advanced refresh
     };
 
-    render() {
+    render() {        
         return (
             <CryptoDetailComponent
                 {...this.state}
@@ -63,23 +64,8 @@ class CryptoDetailsContainer extends PureComponent {
         );
     }
 }
-//  {
-//   coin: {
-//     id: "00",
-//     priceUsd: 0,
-//     marketCapUsd: 0,
-//     priceBtc: 0,
-//     totalSuply: 0,
-//     volumeUsd24h: 0,
-//     percentChange1h: 0,
-//     percentChange24h: 0,
-//     percentChange7d: 0
-//   }
-// }
-const mapStateToProps = state =>({
-
+const mapStateToProps = (state,props) => ({
+    crypto : getListingDetails(state,props.navigation.state.params.cryptoId),
+    convert : conversionCurrency(state)    
 })
-const mapDispatchToProps = dispatch =>({
-    
-})
-export default connect(mapStateToProps,mapDispatchToProps)(CryptoDetailsContainer);
+export default connect(mapStateToProps)(CryptoDetailsContainer);

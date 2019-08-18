@@ -1,10 +1,11 @@
 import { themes } from '../../utils/constants';
-import { TOGGLE_APP_THEME } from '../actions/action-types';
+import { TOGGLE_APP_THEME, TOGGLE_CONVERSION_CURRENCY } from '../actions/action-types';
 
 
 const initialState = {
     darkTheme : true,
-    theme : themes.dark
+    theme : themes.dark,
+    conversion : "USD"
 }
 
 const toggleTheme = (state) => state.darkTheme == true 
@@ -18,6 +19,11 @@ export default function(state = initialState, action){
                 ...state,
                ...toggleTheme(state)
             }
+        case TOGGLE_CONVERSION_CURRENCY:
+         return {
+             ...state,
+             conversion : action.payload,
+         }
         default:
          return state;
     }

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import AppContainer from "./presenter";
-import { fetchLatestListing } from "../../redux/actions/fetch-listing";
+import { fetchLatestListing } from "../../redux/actions/action-creators";
 
 const mapStateToProps = state =>({
     listing : state,

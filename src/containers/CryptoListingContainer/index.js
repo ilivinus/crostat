@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import CryptoItem from '../../components/CryptoListing/presenter';
 import {  PAGE_SIZE } from '../../utils/constants';
 import CrypoLisitingComponent from '../../components/CryptoListing';
-import { loadMore, refreshConnection } from '../../redux/actions/fetch-listing'
-import { getQuotesListing } from '../../redux/selectors';
+import { loadMore, refreshConnection } from '../../redux/actions/action-creators'
+import { getQuotesListing, isListingLoading, conversionCurrency } from '../../redux/selectors';
 
 class CryptoListingContainer extends PureComponent {
     state = {
@@ -53,8 +53,8 @@ class CryptoListingContainer extends PureComponent {
 }
 const mapStateToProps = state =>{
   return ({
-    isLoading : false,
-    convert : "USD", //conversion currency $ or BTC
+    isLoading : isListingLoading(state),
+    convert : conversionCurrency(state), //conversion currency $ or BTC
     listing : getQuotesListing(state) 
   });
 }

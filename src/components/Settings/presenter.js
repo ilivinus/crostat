@@ -2,7 +2,8 @@
 import React, { PureComponent } from 'react';
 import {
   Linking,
-  StyleSheet,
+  CheckBox,
+  Picker,
   Switch,
   Text,
   TouchableOpacity,
@@ -10,35 +11,9 @@ import {
 } from 'react-native';
 
 import { colors, properties, deviceInfo } from '../../utils/constants';
+import styles from './styles';
 
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
-  card: {
-    flexDirection: 'row',
-    height: 50,
-    marginTop: 5,
-    paddingHorizontal: 10,
-    width: '100%',
-  },
-  cardNameWrapper: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  cardText: {
-    fontSize: 16,
-    fontWeight: '600',
-  },
-  sliderWrapper: {
-    alignItems: 'flex-end',
-    flex: 0.4,
-    justifyContent: 'center',
-  },
-});
-
-
-export default class SettingScreen extends PureComponent{
+export default class SettingScreen extends PureComponent {
 
   _handleValueChange = () => {
     this.props.toggleTheme();
@@ -89,6 +64,29 @@ export default class SettingScreen extends PureComponent{
             />
           </View>
         </View>
+        {/* <View
+          style={[
+            styles.card,
+            { backgroundColor: this.props.theme.tabBarColor },
+          ]}
+        >
+          <View style={styles.cardNameWrapper}>
+            <Text
+              style={[styles.cardText, { color: this.props.theme.textColor }]}
+            >
+              CONVERSION
+            </Text>
+          </View>
+          <View style={styles.sliderWrapper}>
+            <Switch
+              thumbColor={colors.primary}
+              onValueChange={this._handleValueChange}
+              trackColor={colors.primary}
+              value={this.props.darkTheme}
+            />
+          </View>
+        </View>
+         */}
         <TouchableOpacity onPress={this._onFeedbackPress}>
           <View
             style={[
@@ -105,6 +103,15 @@ export default class SettingScreen extends PureComponent{
             </View>
           </View>
         </TouchableOpacity>
+        {/* <Picker
+          selectedValue={"java"}
+          style={{ height: 50, width: 100 }}
+          onValueChange={(itemValue, itemIndex) =>{}
+            //this.setState({ language: itemValue })
+          }>
+          <Picker.Item label="Java" value="java" />
+          <Picker.Item label="JavaScript" value="js" />
+        </Picker> */}
       </View>
     );
   }

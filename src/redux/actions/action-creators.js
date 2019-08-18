@@ -15,7 +15,7 @@ export function fetchLatestListing(currency ="USD",start = 1, limit = 50){
        }).catch(err =>{
            dispatch(getListingError(err));
        })
-    },4000);
+    },1000);
     }
 }
 export function loadMore(startingPage =1, pageSize = 10){
