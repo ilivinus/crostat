@@ -1,5 +1,6 @@
 import { Platform } from 'react-native'
 
+export const PAGE_SIZE = 10;
 export const colors = {
     red: '#F8333C',
     green: '#4ADF86',
@@ -34,6 +35,26 @@ export const colors = {
       headerTitleColor: colors.darkGray,
       textColor: colors.darkGray,
       thumbTintColor: colors.darkGray,
+    },
+  };
+  export const metrics = {
+    //hitSlop: makeHitSlop,
+    shadow: {
+      basic: {
+        shadowOffset: {
+          width: 2,
+          height: 0
+        },
+        shadowOpacity: 0.2,
+        shadowColor: colors.black,
+        shadowRadius: 6
+      }
+    }
+  };
+ export const properties = {
+    feedbackEmail: {
+      email: 'umeadumalivinus@gmail.com',
+      subject: 'CloseCross App feedback',
     },
   };
   

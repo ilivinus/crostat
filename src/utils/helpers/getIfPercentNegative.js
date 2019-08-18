@@ -10,7 +10,7 @@
 export function getIfPercentNegative(percent){
     if(!percent) throw new Error('Percent value is required');
   
-    const arr = [...percent];
-  
+    const arr = percent.toString();
+    
     return arr[0] === '-';
   }

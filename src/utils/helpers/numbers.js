@@ -27,7 +27,7 @@ export function isNumeric(value){
     let numStr;
     const regex = /(\d+)(\d{3})/;
   
-    if(value == null) throw new Error('Value is required');
+    if(value == null) return 0;
   
     if (typeof value === 'number') {
       numStr = String(value);
@@ -51,7 +51,7 @@ export function isNumeric(value){
   export function toMoney(value){
     let num;
   
-    if(value == null) throw new Error('Value is required');
+    if(value == null) throw new Error('toMoney Value is required');
   
     if (isNumeric(value)) {
       num = parseFloat(value);
@@ -68,7 +68,7 @@ export function isNumeric(value){
    * @example 99 999.99
    */
   export function moneyThousand(value){
-    if(value == null) throw new Error('Value is required');
+    if(value == null) return 0;
   
     const _money = toMoney(value);
   

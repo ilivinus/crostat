@@ -8,10 +8,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { connect } from 'react-redux';
 
 import { colors, properties, deviceInfo } from '../../utils/constants';
-import { toggleTheme } from '../../redux/actions/actionables';
 
 const styles = StyleSheet.create({
   root: {
@@ -40,7 +38,7 @@ const styles = StyleSheet.create({
 });
 
 
-class SettingScreen extends PureComponent{
+export default class SettingScreen extends PureComponent{
 
   _handleValueChange = () => {
     this.props.toggleTheme();
@@ -84,9 +82,9 @@ class SettingScreen extends PureComponent{
           </View>
           <View style={styles.sliderWrapper}>
             <Switch
-              onTintColor={colors.primary}
+              thumbColor={colors.primary}
               onValueChange={this._handleValueChange}
-              tintColor={colors.primary}
+              trackColor={colors.primary}
               value={this.props.darkTheme}
             />
           </View>
@@ -111,11 +109,3 @@ class SettingScreen extends PureComponent{
     );
   }
 }
-
-export default connect(
-  (state) => ({
-    darkTheme: state.setting.darkTheme,
-    theme: state.setting.theme,
-  }),
-  { toggleTheme },
-)(SettingScreen);
