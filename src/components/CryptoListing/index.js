@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { FlatList, RefreshControl, View } from 'react-native';
+import { FlatList, RefreshControl, View, ActivityIndicator } from 'react-native';
 import { colors } from '../../utils/constants';
 import styles from './styles';
 import Spinner from '../commons/Loading'
@@ -15,6 +15,8 @@ const CryptoListing = (props) => (
       keyExtractor={props._keyExtractor}
       onEndReached={props._onEndReached}
       onEndReachedThreshold={0.5}
+      ListFooterComponent={() => props.isLoading ?
+         <ActivityIndicator color={{ color : '#fff'}} size="large" /> : <View />}
       refreshControl={
         <RefreshControl
           onRefresh={props._onRefresh}

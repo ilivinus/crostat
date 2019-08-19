@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, View, RefreshControl, Text } from 'react-native';
+import { ScrollView, View, RefreshControl } from 'react-native';
 import CryptoCard from './presenter';
 import { moneyThousand, thousandSpace } from '../../utils/helpers/numbers';
 import { colors } from '../../utils/constants';
@@ -86,8 +86,21 @@ class CryptoDetailsComponent extends PureComponent {
           <CryptoCard
             backgroundColor={theme.tabBarColor}
             textColor={theme.textColor}
+            title="Date added"
+            value={crypto.dateAdded}
+          />
+          <CryptoCard
+            backgroundColor={theme.tabBarColor}
+            textColor={theme.textColor}
             title={`Price ${_conversion}`}
             value={_price}
+          />
+
+          <CryptoCard
+            backgroundColor={theme.tabBarColor}
+            textColor={theme.textColor}
+            title="Last updated"
+            value={crypto.lastUpdated}
           />
           <CryptoCard
             backgroundColor={theme.tabBarColor}

@@ -20,7 +20,7 @@ class CryptoItemView extends PureComponent {
     const style = {};
 
     const color = this._getIfNeg(percent) ? colors.red : colors.green;
-    
+
     if (percent == null) {
       str = '##';
       style.color = this.props.screenProps.theme.textColor;
@@ -90,11 +90,16 @@ class CryptoItemView extends PureComponent {
         onPress={this._onNavigationPress}
         style={[styles.root, { backgroundColor: theme.cardBackground }]}
       >
-      <Text style={[styles.volumeText, { color: theme.textColor }]}>
+        <Text style={[styles.volumeText, { color: theme.textColor }]}>
           <NameText style={[styles.volumeText, { color: colors.lightGrey }]}>
             Vol (24h)
           </NameText>{' '}
           {this.props.volume24h}{`(${conversion})`}
+        </Text>
+        <Text style={[styles.timeText, { color: theme.textColor }]}>
+          {/* <NameText style={[styles.timeText, { color: colors.lightGrey }]}>            
+          </NameText> */}
+          {this.props.lastUpdate}
         </Text>
         <View style={styles.titleWrapper}>
           <Text style={[styles.title, { color: theme.textColor }]}>
@@ -102,23 +107,23 @@ class CryptoItemView extends PureComponent {
           </Text>
         </View>
         <View style={styles.metaWrapper}>
-        <Text style={{ color: theme.textColor }}>
-          <NameText style={{ color: colors.lightGrey }}>1h</NameText>          
-        </Text>
+          <Text style={{ color: theme.textColor }}>
+            <NameText style={{ color: colors.lightGrey }}>1h</NameText>
+          </Text>
           {this._getIconPercent(this.props.percentChange1h)}
           {this._getPercentChange(this.props.percentChange1h)}
         </View>
         <View style={styles.metaWrapper}>
-        <Text style={{ color: theme.textColor }}>
-          <NameText style={{ color: colors.lightGrey }}>24h</NameText>          
-        </Text>
+          <Text style={{ color: theme.textColor }}>
+            <NameText style={{ color: colors.lightGrey }}>24h</NameText>
+          </Text>
           {this._getIconPercent(this.props.percentChange24h)}
           {this._getPercentChange(this.props.percentChange24h)}
         </View>
         <View style={styles.metaWrapper}>
-        <Text style={{ color: theme.textColor }}>
-          <NameText style={{ color: colors.lightGrey }}>7d</NameText>          
-        </Text>
+          <Text style={{ color: theme.textColor }}>
+            <NameText style={{ color: colors.lightGrey }}>7d</NameText>
+          </Text>
           {this._getIconPercent(this.props.percentChange7d)}
           {this._getPercentChange(this.props.percentChange7d)}
         </View>
@@ -147,6 +152,7 @@ CryptoItemView.propTypes = {
   volume24h: PropType.number,
   total: PropType.number,
   maxSupply: PropType.number,
-  convert : PropType.string
+  convert: PropType.string,
+  lastUpdate : PropType.string.isRequired
 }
 export default CryptoItemView;

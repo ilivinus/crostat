@@ -34,6 +34,11 @@ const styles = StyleSheet.create({
         left: 10,
         position: 'absolute',
     },
+    timeText : {
+        top: 5,
+        right: 10,
+        position: 'absolute',
+    },
     holdingText: {
         bottom: 5,
         left: 10,

@@ -20,12 +20,12 @@ export const getQuotesListing = (state) => {
 export const getListingDetails = (state, cryptoId) =>{
     const currency = state.setting.conversion;
 
-    const result = state.listings.data.
+    const result = Object.values(state.listings.data).
     filter(m => m.id == cryptoId).map(m => ({
         name : m.name,
         rank : m.cmc_rank,
         marketPairs : m.num_market_pairs,
-        dateAdded : Moment(m.date_added).frormat('LLL'),
+        dateAdded : Moment(m.date_added).format('LLL'),
         lastUpdated : Moment(m.last_updated).format('LTS'),
         mineable : m.tags && m.tags.length > 0 ? true : false, 
         totalSuply: m.total_supply,
