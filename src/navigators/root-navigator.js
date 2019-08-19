@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 import HomeScreen from '../screens/HomeScreen';
-import SettingScreen from '../components/Settings'
+import SettingScreen from '../containers/Settings'
 import SettingButton from '../components/Settings/SettingButton';
 import CryptoDetailScreen from '../containers/CryptoDetails';
 import { connect } from 'react-redux';
@@ -63,6 +63,9 @@ const RootNavigator = createStackNavigator({
 const ConnectedRootNavigator = connect((state)=>({
   screenProps: {
     theme: state.setting.theme,
+    darkTheme : state.setting.darkTheme,
+    conversionList : state.setting.conversionList,
+    conversion : state.setting.conversion,
   }
 }))(RootNavigator)
 

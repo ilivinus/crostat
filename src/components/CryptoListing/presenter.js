@@ -8,6 +8,7 @@ import { moneyThousand } from '../../utils/helpers/numbers';
 import styles from './styles';
 import PropType from 'prop-types';
 
+
 class CryptoItemView extends PureComponent {
   _getIfNeg(percentChange) {
     const _percentChange = percentChange || '0';
@@ -82,7 +83,7 @@ class CryptoItemView extends PureComponent {
     if (this.props.name == null) {
       return null;
     }
-    const { theme } = this.props.screenProps;
+    const { theme, conversion } = this.props.screenProps;
 
     return (
       <TouchableOpacity
@@ -93,7 +94,7 @@ class CryptoItemView extends PureComponent {
           <NameText style={[styles.volumeText, { color: colors.lightGrey }]}>
             Vol (24h)
           </NameText>{' '}
-          {this.props.volume24h}{`(${this.props.convert})`}
+          {this.props.volume24h}{`(${conversion})`}
         </Text>
         <View style={styles.titleWrapper}>
           <Text style={[styles.title, { color: theme.textColor }]}>
@@ -130,7 +131,7 @@ class CryptoItemView extends PureComponent {
           <NameText style={[styles.priceUsdText, { color: colors.lightGrey }]}>
             Price
           </NameText>{' '}
-          {this._getPrice()}{`(${this.props.convert})`}
+          {this._getPrice()}{`(${conversion})`}
         </Text>
       </TouchableOpacity>
     );
