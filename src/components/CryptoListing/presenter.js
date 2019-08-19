@@ -69,7 +69,8 @@ class CryptoItemView extends PureComponent {
   }
 
   _getPrice() {
-    return moneyThousand(this.props.priceUsd);
+    const { conversion } = this.props.screenProps
+    return conversion == "USD" ? moneyThousand(this.props.priceUsd) : this.props.priceUsd.toFixed(8);
   }
 
   _onNavigationPress = () => {
