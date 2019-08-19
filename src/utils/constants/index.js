@@ -1,6 +1,7 @@
 import { Platform } from 'react-native'
 
 export const PAGE_SIZE = 10;
+export const DEBOUNCE_INTERVAL = 2000;
 export const colors = {
     red: '#F8333C',
     green: '#4ADF86',
