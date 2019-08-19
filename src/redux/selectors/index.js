@@ -31,12 +31,12 @@ export const getListingDetails = (state, cryptoId) =>{
         totalSuply: m.total_supply,
         maxSupply : m.max_supply,
         circulatingSupply : m.circulating_supply,
-        marketCapUsd : m.quote[currency].market_cap,
-        volume24h: m.quote[currency].volume_24h ,
-        priceUsd: m.quote[currency].price,       
-        percentChange1h: m.quote[currency].percent_change_1h,
-        percentChange24h: m.quote[currency].percent_change_24h,
-        percentChange7d: m.quote[currency].percent_change_7d
+        marketCapUsd : m.quote[currency] && m.quote[currency].market_cap,
+        volume24h: m.quote[currency] && m.quote[currency].volume_24h ,
+        priceUsd: m.quote[currency] && m.quote[currency].price,       
+        percentChange1h: m.quote[currency] && m.quote[currency].percent_change_1h,
+        percentChange24h: m.quote[currency] && m.quote[currency].percent_change_24h,
+        percentChange7d: m.quote[currency] && m.quote[currency].percent_change_7d
     }));
     return result[0];
 }

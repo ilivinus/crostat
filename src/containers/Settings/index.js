@@ -5,7 +5,7 @@ import { Linking, } from 'react-native';
 import { connect } from 'react-redux';
 import Settings from '../../components/Settings';
 import { properties, deviceInfo, PAGE_SIZE, DEBOUNCE_INTERVAL } from '../../utils/constants';
-import { fetchLatestListing } from '../../redux/actions/action-creators';
+import { fetchDataOnConversionChange } from '../../redux/actions/action-creators';
 //import throttle from '../../utils/helpers/throttle';
 
 class SettingContainer extends React.PureComponent {
@@ -46,6 +46,6 @@ class SettingContainer extends React.PureComponent {
 }
 const mapDispatchToProps = dispatch =>({
     changeTheme :  () => dispatch(toggleTheme()),
-    changeConversion: (conversion) =>dispatch(fetchLatestListing(1, PAGE_SIZE, conversion))
+    changeConversion: (conversion) =>dispatch(fetchDataOnConversionChange(1, PAGE_SIZE, conversion))
 })
 export default connect(null,mapDispatchToProps)(SettingContainer);

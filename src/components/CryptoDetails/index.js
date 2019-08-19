@@ -10,21 +10,7 @@ class CryptoDetailsComponent extends PureComponent {
   render() {
     const { crypto } = this.props;
     const { theme } = (this.props || {}).screenProps;
-    // name : m.name,
-    // rank : m.cmc_rank,
-    // marketPairs : m.num_market_pairs,
-    // dateAdded : m.date_added,
-    // lastUpdated : m.last_updated,
-    // mineable : m.mineable ? true : false, 
-    // totalSuply: m.total_supply,
-    // maxSupply : m.max_supply,
-    // circulatingSupply : m.circulating_supply,
-    // marketCapUsd : m.quote[currency].market_cap,
-    // volumeUsd24h: m.quote[currency].volume24h ,
-    // priceUsd: m.quote[currency].price,       
-    // percentChange1h: m.quote[currency].percent_change_1h,
-    // percentChange24h: m.quote[currency].percent_change_24h,
-    // percentChange7d: m.quote[currency].percent_change_7d
+    
     const _conversion = this.props.convert;
     const _marketCap = thousandSpace(crypto.marketCapUsd);
     const _percentChang1h = thousandSpace(crypto.percentChange1h);
@@ -93,7 +79,7 @@ class CryptoDetailsComponent extends PureComponent {
             backgroundColor={theme.tabBarColor}
             textColor={theme.textColor}
             title={`Price ${_conversion}`}
-            value={_price}
+            value={_conversion == "USD" ? _price : crypto.priceUsd.toFixed(8)}
           />
 
           <CryptoCard
