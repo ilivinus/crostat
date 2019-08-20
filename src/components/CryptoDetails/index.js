@@ -1,25 +1,28 @@
 import React, { PureComponent } from 'react';
 import { ScrollView, View, RefreshControl } from 'react-native';
 import CryptoCard from './presenter';
-import { getIfPercentNegative } from '../../utils/helpers/getIfPercentNegative';
 import { moneyThousand, thousandSpace } from '../../utils/helpers/numbers';
 import { colors } from '../../utils/constants';
 import PropType from 'prop-types';
 import styles from './styles';
 
 class CryptoDetailsComponent extends PureComponent {
+
+  _onRefresh(){
+    this.props._onRefresh();
+  }
   render() {
-    const { coin } = this.props;
+    const { crypto } = this.props;    
     const { theme } = this.props.screenProps;
-    console.log(this.props,"###@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    const _marketCap = thousandSpace(coin.marketCapUsd);
-    const _percentChang1h = thousandSpace(coin.percentChange1h);
-    const _percentChang24h = thousandSpace(coin.percentChange24h);
-    const _percentChang7d = thousandSpace(coin.percentChange7d);
-    const _price = moneyThousand(coin.priceUsd);
-    const _priceBtc = thousandSpace(coin.priceBtc);
-    const _totalSuply = thousandSpace(coin.totalSuply);
-    const _volume = thousandSpace(coin.volumeUsd24h);
+
+    const _conversion = this.props.convert;
+    const _marketCap = thousandSpace(crypto.marketCapUsd);
+    const _percentChang1h = thousandSpace(crypto.percentChange1h);
+    const _percentChang24h = thousandSpace(crypto.percentChange24h);
+    const _percentChang7d = thousandSpace(crypto.percentChange7d);
+    const _price = _conversion == "USD" ? moneyThousand(crypto.priceUsd) : crypto.priceUsd.toFixed(8);
+    const _totalSuply = thousandSpace(crypto.totalSuply);
+    const _volume = thousandSpace(crypto.volume24h);
 
     return (
       <View style={[styles.root, { backgroundColor: theme.cardBackground }]}>
@@ -27,17 +30,24 @@ class CryptoDetailsComponent extends PureComponent {
           contentContainerStyle={styles.metaWrapper}
           refreshControl={
             <RefreshControl
-              onRefresh={this.props._onRefresh}
+              onRefresh={this._onRefresh}
               refreshing={this.props.refreshing}
               tintColor={colors.primary}
             />
           }
         >
+
           <CryptoCard
             backgroundColor={theme.tabBarColor}
             textColor={theme.textColor}
-            title="Price USD"
-            value={_price}
+            title="Name"
+            value={crypto.name}
+          />
+          <CryptoCard
+            backgroundColor={theme.tabBarColor}
+            textColor={theme.textColor}
+            title="Rank"
+            value={crypto.rank}
           />
           <CryptoCard
             backgroundColor={theme.tabBarColor}
@@ -48,8 +58,14 @@ class CryptoDetailsComponent extends PureComponent {
           <CryptoCard
             backgroundColor={theme.tabBarColor}
             textColor={theme.textColor}
-            title="Price BTC"
-            value={_priceBtc}
+            title="Circulation Supply"
+            value={crypto.circulatingSupply}
+          />
+          <CryptoCard
+            backgroundColor={theme.tabBarColor}
+            textColor={theme.textColor}
+            title="Max Supply"
+            value={crypto.maxSupply}
           />
           <CryptoCard
             backgroundColor={theme.tabBarColor}
@@ -60,7 +76,26 @@ class CryptoDetailsComponent extends PureComponent {
           <CryptoCard
             backgroundColor={theme.tabBarColor}
             textColor={theme.textColor}
-            title="VOLUME"
+            title="Date added"
+            value={crypto.dateAdded}
+          />
+          <CryptoCard
+            backgroundColor={theme.tabBarColor}
+            textColor={theme.textColor}
+            title={`Price ${_conversion}`}
+            value={_price}
+          />
+
+          <CryptoCard
+            backgroundColor={theme.tabBarColor}
+            textColor={theme.textColor}
+            title="Last updated"
+            value={crypto.lastUpdated}
+          />
+          <CryptoCard
+            backgroundColor={theme.tabBarColor}
+            textColor={theme.textColor}
+            title="24h VOLUME"
             value={_volume}
           />
           <CryptoCard
@@ -87,26 +122,31 @@ class CryptoDetailsComponent extends PureComponent {
   }
 }
 CryptoDetailsComponent.propTypes = {
-  coin: PropType.shape({
-    id: PropType.string,
+  _percent1hColor : PropType.func.isRequired,
+  _percent7dColor : PropType.func.isRequired,
+  _percent24hColor : PropType.func.isRequired,
+  _onRefresh : PropType.func.isRequired,
+  refreshing : PropType.bool,
+  screenProps : PropType.object,
+  crypto: PropType.shape({
     priceUsd: PropType.number,
     marketCapUsd: PropType.number,
     priceBtc: PropType.number,
     totalSuply: PropType.number,
-    volumeUsd24h: PropType.number,
+    volume24h: PropType.number,
     percentChange1h: PropType.number,
     percentChange24h: PropType.number,
     percentChange7d: PropType.number
   })
 }
 CryptoDetailsComponent.defaultProps = {
-  coin: {
-    id: "00",
+  refreshing : false,
+  crypto: {
     priceUsd: 0,
     marketCapUsd: 0,
     priceBtc: 0,
     totalSuply: 0,
-    volumeUsd24h: 0,
+    volume24h: 0,
     percentChange1h: 0,
     percentChange24h: 0,
     percentChange7d: 0

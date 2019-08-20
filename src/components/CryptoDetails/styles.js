@@ -3,35 +3,34 @@ import { StyleSheet, View } from 'react-native';
 import { metrics } from '../../utils/constants/index'
 const styles = StyleSheet.create({
     metaWrapper: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         flex: 1,
-        justifyContent: 'space-around',
-        flexWrap: 'wrap',
         alignItems: 'center',
-        paddingVertical: 10,
+        paddingVertical: 1,
     },
     root: {
         flex: 1,
     },
     cryptoDetailsRoot: {
-        height: 90,
-        width: '45%',
-        marginVertical: 15,
-        justifyContent: 'center',
-        alignItems: 'center',
+        height: 50,
+        width: '95%',
+        marginVertical: 1,
     },
-    titleWrapper: {
-        flex: 0.4,
-        justifyContent: 'center',
-        alignItems: 'center',
+    titleWrapper: {        
+        justifyContent: 'flex-start',             
+        alignSelf : 'center'
+    },
+    valueWrapper : {
+        justifyContent : 'flex-end',
+        alignSelf : 'center'
     },
     card: {
         padding: 5,
-        borderRadius: 5,
+        borderRadius: 0,
         flex: 1,
         alignSelf: 'stretch',
-        justifyContent: 'center',
-        alignItems: 'center',
+        flexDirection : 'row',  
+        justifyContent : 'space-between',
         ...metrics.shadow.basic
     },
 });

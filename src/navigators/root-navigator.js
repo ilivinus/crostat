@@ -1,25 +1,24 @@
 import React from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation'
-import HomeNavigator from './home-navigator';
-import SettingScreen from '../components/Settings'
-//import BackButton from '../components/commons/BackButton';
+import HomeScreen from '../screens/HomeScreen';
+import SettingScreen from '../containers/Settings'
+import SettingButton from '../components/Settings/SettingButton';
 import CryptoDetailScreen from '../containers/CryptoDetails';
 import { connect } from 'react-redux';
-import Icon from 'react-native-vector-icons/Ionicons';
+
 
 const RootNavigator = createStackNavigator({
   Home: {
-    screen: HomeNavigator,
+    screen: HomeScreen,
     navigationOptions: (props) => ({      
-      headerTitle: 'CloseCross',
-      // headerTitleStyle: {
-      //   color: props.screenProps.theme.headerTitleColor,
-      // },
-      // headerStyle: {
-      //   backgroundColor: props.screenProps.theme.tabBarColor,
-      // },
-      // headerRight: <ButtonSearch />,]
-      headerRight : <Icon name="ios-settings" size={25} onPress={()=>props.navigation.navigate("Setting")} />// <BackButton goBack={()=>props.navigation.navigate("Setting")} />
+      headerTitle: 'Crypto Listing',      
+      headerTitleStyle: {
+        color: props.screenProps.theme.headerTitleColor,
+      },
+      headerStyle: {
+        backgroundColor: props.screenProps.theme.tabBarColor,
+      },
+      headerRight : <SettingButton {...props} goBack={()=>props.navigation.navigate("Setting")} />
     }),
   },
   CryptoDetailsScreen: {
@@ -27,19 +26,20 @@ const RootNavigator = createStackNavigator({
     navigationOptions: (props) => ({
       headerTitle: props.navigation.state.params.name,
       //headerBackTitle: null,
+      headerTintColor :  props.screenProps.theme.headerTitleColor,
       headerTitleStyle: {
         color: props.screenProps.theme.headerTitleColor,
       },
       headerStyle: {
         backgroundColor: props.screenProps.theme.tabBarColor,
-      },
-      //headerLeft: <BackButton goBack={props.navigation.goBack} />,
+      }
     }),
   },
   Setting: {
     screen: SettingScreen,
     navigationOptions: (props) => ({
       headerTitle: 'Settings',
+      headerTintColor : props.screenProps.theme.headerTitleColor,
       headerTitleStyle: {
         color: props.screenProps.theme.headerTitleColor,
       },
@@ -52,6 +52,7 @@ const RootNavigator = createStackNavigator({
 },
 {
   headerMode: 'screen',
+  initialRouteName : 'Home',
   cardStyle: {
     backgroundColor: '#161C36',
     // backgroundColor: 'transparent',
@@ -62,6 +63,10 @@ const RootNavigator = createStackNavigator({
 const ConnectedRootNavigator = connect((state)=>({
   screenProps: {
     theme: state.setting.theme,
+    darkTheme : state.setting.darkTheme,
+    conversionList : state.setting.conversionList,
+    conversion : state.setting.conversion,
   }
 }))(RootNavigator)
+
 export default createAppContainer(ConnectedRootNavigator);

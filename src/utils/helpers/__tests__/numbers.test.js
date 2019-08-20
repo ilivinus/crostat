@@ -14,12 +14,8 @@ describe('#thousandSpace()', () => {
     expect(thousandSpace(11123899)).toBe('11 123 899');
   });
 
-  it('should return an error if no value provided', () => {
-    function call() {
-      thousandSpace();
-    }
-
-    expect(call).toThrowError('Value is required');
+  it('should return an zero if no value provided', () => {
+    expect(thousandSpace()).toBe(0);
   });
 });
 
@@ -55,12 +51,8 @@ describe('#moneyThousand()', () => {
     expect(moneyThousand(0)).toBe('0.00');
   });
 
-  it('should return an error if no value provided', () => {
-    function call() {
-      moneyThousand();
-    }
-
-    expect(call).toThrowError('Value is required');
+  it('should return an zero if no value provided', () => {    
+    expect(moneyThousand()).toBe(0);
   });
 });
 

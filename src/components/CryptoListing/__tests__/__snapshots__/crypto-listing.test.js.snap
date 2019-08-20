@@ -1,0 +1,463 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#CryptoListing index should render listing properly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      Object {
+        "backgroundColor": undefined,
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    ListFooterComponent={[Function]}
+    contentContainerStyle={
+      Object {
+        "alignSelf": "stretch",
+      }
+    }
+    data={Array []}
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReached={[MockFunction]}
+    onEndReachedThreshold={0.5}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[MockFunction]}
+        refreshing={false}
+        tintColor="#00C0FF"
+      />
+    }
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <RCTRefreshControl />
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <View />
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`#CryptoListing presenter should render listing properly 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "center",
+      "backgroundColor": undefined,
+      "flexDirection": "row",
+      "height": 130,
+      "opacity": 1,
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 15,
+          "fontWeight": "400",
+        },
+        Array [
+          Object {
+            "left": 10,
+            "position": "absolute",
+            "top": 5,
+          },
+          Object {
+            "color": undefined,
+          },
+        ],
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 14,
+            "fontWeight": "500",
+          },
+          Array [
+            Object {
+              "left": 10,
+              "position": "absolute",
+              "top": 5,
+            },
+            Object {
+              "color": "#B4B4B4",
+            },
+          ],
+        ]
+      }
+    >
+      Vol (24h)
+    </Text>
+     
+    329
+    (undefined)
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 15,
+          "fontWeight": "400",
+        },
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 10,
+            "top": 5,
+          },
+          Object {
+            "color": undefined,
+          },
+        ],
+      ]
+    }
+  >
+    155322323434
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.4,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          Array [
+            Object {
+              "fontWeight": "bold",
+              "marginTop": 5,
+              "textAlign": "center",
+            },
+            Object {
+              "color": undefined,
+            },
+          ],
+        ]
+      }
+    >
+      BTC
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.4,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          Object {
+            "color": undefined,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "fontWeight": "500",
+            },
+            Object {
+              "color": "#B4B4B4",
+            },
+          ]
+        }
+      >
+        1h
+      </Text>
+    </Text>
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#4ADF86",
+            "fontSize": 25,
+          },
+          undefined,
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          Object {
+            "color": "#4ADF86",
+          },
+        ]
+      }
+    >
+      23.00%
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.4,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          Object {
+            "color": undefined,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "fontWeight": "500",
+            },
+            Object {
+              "color": "#B4B4B4",
+            },
+          ]
+        }
+      >
+        24h
+      </Text>
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          Object {
+            "color": undefined,
+          },
+        ]
+      }
+    >
+      ##
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.4,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          Object {
+            "color": undefined,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "fontWeight": "500",
+            },
+            Object {
+              "color": "#B4B4B4",
+            },
+          ]
+        }
+      >
+        7d
+      </Text>
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          Object {
+            "color": undefined,
+          },
+        ]
+      }
+    >
+      ##
+    </Text>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 15,
+          "fontWeight": "400",
+        },
+        Array [
+          Object {
+            "bottom": 5,
+            "left": 10,
+            "position": "absolute",
+          },
+          Object {
+            "color": undefined,
+          },
+        ],
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 14,
+            "fontWeight": "500",
+          },
+          Array [
+            Object {
+              "bottom": 5,
+              "left": 10,
+              "position": "absolute",
+            },
+            Object {
+              "color": "#B4B4B4",
+            },
+          ],
+        ]
+      }
+    >
+      bitcoin
+    </Text>
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 15,
+          "fontWeight": "400",
+        },
+        Array [
+          Object {
+            "bottom": 5,
+            "position": "absolute",
+            "right": 10,
+          },
+          Object {
+            "color": undefined,
+          },
+        ],
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 14,
+            "fontWeight": "500",
+          },
+          Array [
+            Object {
+              "bottom": 5,
+              "position": "absolute",
+              "right": 10,
+            },
+            Object {
+              "color": "#B4B4B4",
+            },
+          ],
+        ]
+      }
+    >
+      Price
+    </Text>
+     
+    2.00000000
+    (undefined)
+  </Text>
+</View>
+`;

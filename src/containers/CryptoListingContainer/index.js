@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react';
-import { View } from 'react-native';
 import { connect } from 'react-redux';
 import CryptoItem from '../../components/CryptoListing/presenter';
 import {  PAGE_SIZE } from '../../utils/constants';
 import CrypoLisitingComponent from '../../components/CryptoListing';
-import { loadMore, refreshConnection } from '../../redux/actions/fetch-listing'
-import { getQuotesListing } from '../../redux/selectors';
+import { loadMore, fetchLatestListing } from '../../redux/actions/action-creators'
+import { getQuotesListing, isListingLoading } from '../../redux/selectors';
 
 class CryptoListingContainer extends PureComponent {
     state = {
@@ -17,20 +16,19 @@ class CryptoListingContainer extends PureComponent {
         <CryptoItem
            {...item}
            navigation={this.props.navigation}
-           screenProps={this.props.screenProps}
-           convert={this.props.convert}
+           screenProps={this.props.screenProps}           
         />
       )
       
       _onEndReached = () => {
-        if (this.props.isLoading) {
+        if (!this.props.isLoading) {
           this.props.loadMore(1,PAGE_SIZE);
         }
       };
     
-      _onRefresh = async () => {
+      _onRefresh = () => {
        this.setState({ refreshing: true, startingPage : 1 });
-       await this.props.refetchConnection(PAGE_SIZE, 1);
+       this.props.refetchConnection(1,PAGE_SIZE);
        this.setState({ refreshing: false });
       };
     
@@ -53,14 +51,13 @@ class CryptoListingContainer extends PureComponent {
 }
 const mapStateToProps = state =>{
   return ({
-    isLoading : false,
-    convert : "USD", //conversion currency $ or BTC
+    isLoading : isListingLoading(state),    
     listing : getQuotesListing(state) 
   });
 }
 const mapDispatchToProps = dispatch =>({
-    loadMore,
-    refreshConnection
+    loadMore : (start,pageSize) => dispatch(loadMore(start,pageSize)),
+    refetchConnection : (start,pageSize) => dispatch(fetchLatestListing(start,pageSize))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(CryptoListingContainer);
   

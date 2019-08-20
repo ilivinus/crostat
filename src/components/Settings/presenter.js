@@ -1,81 +1,37 @@
 
 import React, { PureComponent } from 'react';
 import {
-  Linking,
-  StyleSheet,
+  Picker,
   Switch,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
 
-import { colors, properties, deviceInfo } from '../../utils/constants';
+import { colors } from '../../utils/constants';
+import styles from './styles';
 
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
-  card: {
-    flexDirection: 'row',
-    height: 50,
-    marginTop: 5,
-    paddingHorizontal: 10,
-    width: '100%',
-  },
-  cardNameWrapper: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  cardText: {
-    fontSize: 16,
-    fontWeight: '600',
-  },
-  sliderWrapper: {
-    alignItems: 'flex-end',
-    flex: 0.4,
-    justifyContent: 'center',
-  },
-});
-
-
-export default class SettingScreen extends PureComponent{
-
-  _handleValueChange = () => {
-    this.props.toggleTheme();
-  };
-
-  _onFeedbackPress = async () => {
-    if (deviceInfo.isEmulator) {
-      return null;
-    }
-    const url = `mailto:${properties.feedbackEmail.email}?subject=${properties
-      .feedbackEmail.subject}`;
-    const _canOpen = await Linking.openURL(url);
-
-    if (_canOpen) {
-      return Linking.openURL(url);
-    }
-
-    return null;
-  };
+export default class SettingView extends PureComponent {
 
   render() {
+    const { theme, darkTheme, conversionList, conversion } = this.props.screenProps;
+    
     return (
       <View
         style={[
           styles.root,
-          { backgroundColor: this.props.theme.cardBackground },
+          { backgroundColor: theme.cardBackground },
         ]}
       >
-        <View
+      <View
           style={[
             styles.card,
-            { backgroundColor: this.props.theme.tabBarColor },
+            { backgroundColor: theme.tabBarColor },
           ]}
         >
           <View style={styles.cardNameWrapper}>
             <Text
-              style={[styles.cardText, { color: this.props.theme.textColor }]}
+              style={[styles.cardText, { color: theme.textColor }]}
             >
               DARK THEME
             </Text>
@@ -83,24 +39,48 @@ export default class SettingScreen extends PureComponent{
           <View style={styles.sliderWrapper}>
             <Switch
               thumbColor={colors.primary}
-              onValueChange={this._handleValueChange}
+              onValueChange={this.props._handleValueChange}
               trackColor={colors.primary}
-              value={this.props.darkTheme}
+              value={darkTheme}
             />
           </View>
         </View>
-        <TouchableOpacity onPress={this._onFeedbackPress}>
+
+        <View
+          style={[
+            styles.card,
+            { backgroundColor: theme.tabBarColor },
+          ]}
+        >        
+          <View style={styles.cardNameWrapper}>
+            <Text
+              style={[styles.cardText, { color: theme.textColor }]}
+            >
+              CONVERSION
+            </Text>
+          </View>
+          <View style={styles.sliderWrapper}>
+            <Picker
+              selectedValue={conversion}                            
+              style={{ height: 50, width: 100, color : colors.primary }}
+              onValueChange={this.props._handleConversionChange} >
+              {conversionList.map(m =>(<Picker.Item key={m} label={m} value={m} />))}
+            </Picker>            
+          </View>
+        </View>
+        
+        <TouchableOpacity onPress={this.props._onFeedbackPress}>
           <View
             style={[
               styles.card,
-              { backgroundColor: this.props.theme.tabBarColor },
+              { backgroundColor: theme.tabBarColor },
             ]}
           >
             <View style={styles.cardNameWrapper}>
               <Text
-                style={[styles.cardText, { color: this.props.theme.textColor }]}
+                style={[styles.cardText, { color: theme.textColor }]}
               >
-                FEEDBACK
+                CONTACT ME
               </Text>
             </View>
           </View>
