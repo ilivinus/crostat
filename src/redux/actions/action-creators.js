@@ -1,4 +1,4 @@
-import { CryptoService } from '../../services/cryptocurrency-ervice';
+import { CryptoService } from '../../services/cryptocurrency-service';
 import { API_KEY } from '../../utils/config';
 import { API } from '../../services/apis';
 import { getListing, getListingError, requestListing, setConversion, conversionChange } from './actionables';

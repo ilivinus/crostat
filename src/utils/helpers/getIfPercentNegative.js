@@ -8,7 +8,7 @@
  * @returns {boolean}
  */
 export function getIfPercentNegative(percent){
-    if(!percent) throw new Error('Percent value is required');
+    if(!percent && isNaN(percent)) throw new Error('value is required');
   
     const arr = percent.toString();
     

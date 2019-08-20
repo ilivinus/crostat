@@ -8,7 +8,6 @@ import {
   LayoutAnimation,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { connect } from 'react-redux';
 
 
 const ANIMATION_MS = 300;
@@ -112,6 +111,4 @@ class SearchBar extends PureComponent{
   }
 }
 
-export default connect((state) => ({
-  isShow: true,
-}))(SearchBar);
+export default SearchBar;

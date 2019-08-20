@@ -1,0 +1,1284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#CryptoCardComponent should render cryptocardComponent 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      Object {
+        "backgroundColor": "#161C36",
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "paddingVertical": 1,
+      }
+    }
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[Function]}
+        refreshing={false}
+        tintColor="#00C0FF"
+      />
+    }
+  >
+    <RCTRefreshControl />
+    <View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              Name
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              Rank
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              Market Cap
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            >
+              0
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              Circulation Supply
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              Max Supply
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              Total Supply
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            >
+              0
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              Date added
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              Price undefined
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            >
+              232.00000000
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              Last updated
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              24h VOLUME
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            >
+              0
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              % CHANGE 1H
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": undefined,
+                  },
+                ]
+              }
+            >
+              0
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              % CHANGE 24H
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": undefined,
+                  },
+                ]
+              }
+            >
+              0
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 50,
+            "marginVertical": 1,
+            "width": "95%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "borderRadius": 0,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 6,
+              },
+              Object {
+                "backgroundColor": "#192543",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                  Object {
+                    "color": "#B4B4B4",
+                  },
+                ]
+              }
+            >
+              % CHANGE 7D
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "justifyContent": "flex-end",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "color": undefined,
+                  },
+                ]
+              }
+            >
+              0
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`#CryptoDetails should render the presenter properly 1`] = `
+<View
+  style={
+    Object {
+      "height": 50,
+      "marginVertical": 1,
+      "width": "95%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": 0,
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "padding": 5,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 0,
+            "width": 2,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 6,
+        },
+        Object {
+          "backgroundColor": undefined,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "fontWeight": "500",
+            },
+            Object {
+              "color": "#B4B4B4",
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Array [
+            Object {
+              "fontSize": 15,
+              "fontWeight": "400",
+            },
+            Object {
+              "color": undefined,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`#CryptoDetails should render the the index 1`] = `
+<View
+  style={
+    Object {
+      "height": 50,
+      "marginVertical": 1,
+      "width": "95%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": 0,
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "padding": 5,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 0,
+            "width": 2,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 6,
+        },
+        Object {
+          "backgroundColor": undefined,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "fontWeight": "500",
+            },
+            Object {
+              "color": "#B4B4B4",
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Array [
+            Object {
+              "fontSize": 15,
+              "fontWeight": "400",
+            },
+            Object {
+              "color": undefined,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

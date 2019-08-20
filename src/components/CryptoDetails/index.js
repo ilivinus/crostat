@@ -7,9 +7,13 @@ import PropType from 'prop-types';
 import styles from './styles';
 
 class CryptoDetailsComponent extends PureComponent {
+
+  _onRefresh(){
+    this.props._onRefresh();
+  }
   render() {
-    const { crypto } = this.props;
-    const { theme } = (this.props || {}).screenProps;
+    const { crypto } = this.props;    
+    const { theme } = this.props.screenProps;
 
     const _conversion = this.props.convert;
     const _marketCap = thousandSpace(crypto.marketCapUsd);
@@ -26,7 +30,7 @@ class CryptoDetailsComponent extends PureComponent {
           contentContainerStyle={styles.metaWrapper}
           refreshControl={
             <RefreshControl
-              onRefresh={this.props._onRefresh}
+              onRefresh={this._onRefresh}
               refreshing={this.props.refreshing}
               tintColor={colors.primary}
             />
@@ -118,6 +122,12 @@ class CryptoDetailsComponent extends PureComponent {
   }
 }
 CryptoDetailsComponent.propTypes = {
+  _percent1hColor : PropType.func.isRequired,
+  _percent7dColor : PropType.func.isRequired,
+  _percent24hColor : PropType.func.isRequired,
+  _onRefresh : PropType.func.isRequired,
+  refreshing : PropType.bool,
+  screenProps : PropType.object,
   crypto: PropType.shape({
     priceUsd: PropType.number,
     marketCapUsd: PropType.number,
@@ -130,6 +140,7 @@ CryptoDetailsComponent.propTypes = {
   })
 }
 CryptoDetailsComponent.defaultProps = {
+  refreshing : false,
   crypto: {
     priceUsd: 0,
     marketCapUsd: 0,

@@ -51,7 +51,7 @@ export function isNumeric(value){
   export function toMoney(value){
     let num;
   
-    if(value == null) throw new Error('toMoney Value is required');
+    if(value == null) throw new Error('Value is required');
   
     if (isNumeric(value)) {
       num = parseFloat(value);
